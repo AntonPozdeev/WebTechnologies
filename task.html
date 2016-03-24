@@ -1,0 +1,135 @@
+<!-- "Sticky side 
+menu"
+Grid content
+panel right
+Up button -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+		<meta charset="UTF-8">
+		<title>Task</title>
+		<style>
+			#rightPanel
+			{
+				float: right; 
+				height: 500px; 
+				width: 200px; 
+				position: absolute;
+				right: 0;
+				background: grey;
+			}
+			#content
+			{
+				margin-right: 200px;
+				background: green;
+			}
+			.content
+			{
+				float: left; 
+				width: 25%;
+				height: 100px;
+				background: yellow;
+			}
+			.buttonUp{
+				width:60px;
+				height:60px;
+				opacity:1;
+				position:fixed;
+				bottom:50px;
+				left:10px;
+				display:none;
+				background: url(http://i1155.photobucket.com/albums/p559/scrolltotop/arrow7.png) no-repeat;
+				background-size;
+			}
+			
+			@media(max-width: 1300px)
+			{
+				#rightPanel
+				{
+					display:none;
+				}
+				#content
+				{
+					margin: 0 !important;
+				}
+				.content
+				{
+					width: 25%;
+				}
+			}
+			@media(max-width: 768px)
+			{
+				.content
+				{
+					width: 50%;
+				}
+			}
+		</style>
+	</head>
+	<body style="margin: 0px">
+		<header style="height: 100px; background: red">Header</header>
+		<div style="line-height: 20px;background: blue">Hellow World</div>
+		<div id="rightPanel">Panel</div>
+		<a href="#" class="buttonUp"></a>
+		<div id="content">
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+			<div class="content">content</div>
+		</div>
+		<script>
+		$(window).scroll(function(){
+            if ($(this).scrollTop() > 200) {
+                $('.buttonUp').fadeIn();
+            } else {
+                $('.buttonUp').fadeOut();
+            }
+			if ($(this).scrollTop() > 120) {
+				document.getElementById('rightPanel').style.position='fixed';
+                document.getElementById('rightPanel').style.top='0px';
+            } else {
+                document.getElementById('rightPanel').style.position='absolute';
+				document.getElementById('rightPanel').style.top='';
+            }
+        });
+
+        $('.buttonUp').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 100);
+            return false;
+        });
+		</script>
+	</body>
+</html>
