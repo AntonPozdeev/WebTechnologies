@@ -112,19 +112,19 @@ Up button -->
 		</div>
 		<script>
 			$(window).scroll(function(){
-	            if ($(this).scrollTop() > 200) {
-	                $('.buttonUp').fadeIn();
-	            } else {
-	                $('.buttonUp').fadeOut();
-	            }
+	            		if ($(this).scrollTop() > 200) {
+	                		$('.buttonUp').fadeIn();
+		            	} else {
+		                	$('.buttonUp').fadeOut();
+		            	}
 				if ($(this).scrollTop() > 120) {
 					document.getElementById('rightPanel').style.position='fixed';
-	                document.getElementById('rightPanel').style.top='0px';
-	            } else {
-	                document.getElementById('rightPanel').style.position='absolute';
+		                	document.getElementById('rightPanel').style.top='0px';
+		            	} else {
+		                	document.getElementById('rightPanel').style.position='absolute';
 					document.getElementById('rightPanel').style.top='';
-	            }
-	        });
+		            	}
+			});
 
 		        $('.buttonUp').click(function(){
 		            $("html, body").animate({ scrollTop: 0 }, 100);
