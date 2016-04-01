@@ -27,7 +27,6 @@
 			height: 500px; 
 			width: 200px;
 			background: grey;
-			right: 0;
 		}
 		#content
 		{
@@ -132,15 +131,15 @@
 		var pageY = window.pageYOffset;
 
 		if (pageY > 220) {
-				var w = (screen.width-document.getElementById('content').offsetWidth)/2;
-				document.getElementById('rightPanel').style.position='fixed';
-                document.getElementById('rightPanel').style.top='0px';
-				document.getElementById('rightPanel').style.right=w+'px';				
-            } else {
-                document.getElementById('rightPanel').style.position='relative';
-				document.getElementById('rightPanel').style.top='';
-				document.getElementById('rightPanel').style.right='0px';	
-            }
+			var w = (document.documentElement.clientWidth-document.getElementById('bod').clientWidth)/2;
+			document.getElementById('rightPanel').style.position='fixed';
+                	document.getElementById('rightPanel').style.top='0px';
+			document.getElementById('rightPanel').style.right=w+'px';				
+            	} else {
+                	document.getElementById('rightPanel').style.position='relative';
+			document.getElementById('rightPanel').style.top='';
+			document.getElementById('rightPanel').style.right='0px';	
+            	}
         };
 		document.getElementById('buttonUp').addEventListener("click",function (time, acceleration) {
 
